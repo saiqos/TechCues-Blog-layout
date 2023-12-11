@@ -1,0 +1,651 @@
+@import './reset.css';
+@import './variables.css';
+
+
+
+/* learn more  */
+.learn-more{
+    background-color: var(--purple-bg);
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--light);
+    font-size: 13px;
+}
+.learn-more>a{
+    color: var(--light);
+    text-decoration: none;
+}
+
+.learn-more>a:hover{
+    text-decoration: underline;
+}
+
+
+/* nav */
+
+.header{
+    box-shadow: 6px 6px 16px 0px #1111311F;
+    padding: 20px 0;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    flex-wrap: wrap;
+}
+
+
+.header__nav-buttons{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.header__search{
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.header__subscribe{
+    padding: 8px 16px;
+    background-color: var(--accent-text);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 28.8px;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.header__form-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+
+/* form and implementation of the custom select */
+.header__form{
+    display: flex;
+    gap: 24px;
+}
+
+.header__select{
+    /* обнуление */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    color: var(--main-text);
+    position: relative;
+    /* индекс для того чтобы на стрелочку можно было нажать */
+    z-index: 1;
+    background-color: transparent;
+    padding-right: 20px;
+    line-height: 29px;
+    font-size: 14px;
+}
+/* обнуление стрелочки в Internet Explorer 10 and 11 */
+.header__select::-ms-expand{
+    display: none;
+}
+
+/* adding an arrow */
+
+.header__select-wrapper{
+    position: relative;
+}
+.header__select-wrapper::after{
+    content: '';
+    width: 11px;
+    height: 22px;
+    position: absolute;
+    top: 2px;
+    right: 0px;
+    background-image: url('../img/select-arrow-down.svg');
+    background-size: cover;
+}
+.header__form-link{
+    text-decoration: none;
+    color: var(--main-text);
+    line-height: 29px;
+}
+
+
+/* MAIN */
+
+
+/* mobile-technology */
+.mobile-technology{
+    margin-top: var(--section-margin);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    position: relative;
+    background-color: #fff;
+}
+.mobile-technology::before{
+    content: '';
+    width: 404px;
+    height: 392px;
+    position: absolute;
+    right: -88px;
+    top: -40px;
+    z-index: -1;
+    background-image: url('../img/bg-arrows.png');
+}
+.mobile-technology::after{
+    content: '';
+    width: 404px;
+    height: 392px;
+    position: absolute;
+    left: -60px;
+    bottom: -57px;
+    z-index: -1;
+    background-image: url('../img/bg-arrows.png');
+}
+.mobile-technology__article{
+    box-sizing: border-box;
+    padding: 65px 45px;
+    border: 1px solid #EBEAF2;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    position: relative;
+}
+
+.mobile-technology__article::before{
+    content: '';
+    width: 4px;
+    height: 432px;
+    background-color: var(--accent-text);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 2;
+}
+
+.mobile-technology__text{
+    line-height: 62px;
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+
+}
+
+.mobile-technology__name{
+    margin-top: 30px;
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+}
+
+.mobile-technology__img{
+max-width: 100%;
+min-height: 560px;
+object-fit: cover;
+}
+
+
+
+/* RECENT */
+
+.recent{
+    margin-top: var(--section-margin);
+}
+
+.recent__content{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.recent__article{
+    max-width: 33.3%;
+    min-width: 20%;
+    border: 1px solid #EBEAF2;
+    box-sizing: border-box;
+}
+
+.recent__article-text{
+    padding: 30px 10px 37px 20px;
+    box-sizing: border-box;
+    min-height: 205px;
+}
+
+.recent__article cite{
+    margin-top: 30px;
+}
+.recent__article p{
+    max-width: 265px;
+    margin-top: 7px;
+}
+
+.recent__article img{
+    width: 367px;
+    max-width: 100%;
+    max-height:200px;
+}
+
+
+/* EBOOK */
+
+.ebook{
+    margin-top: var(--section-margin);
+    box-sizing: border-box;
+    min-height: 254px;
+    padding: 48px;
+    background-color: #111131;
+    border-radius: 8px;
+}
+
+.ebook h3{
+    font-weight: 700;
+}
+
+.ebook__content{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+
+.ebook__form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.studies{
+    margin-top: var(--section-margin);
+}
+
+.studies__content{
+    margin-top: 30px;
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.studies__main{
+    border-radius: 8px;
+    border: 1px solid #EBEAF2;
+    min-height: 507px;
+    box-sizing: border-box;
+    position: relative;
+    flex: 1 1;
+    background-color: #fff;
+}
+
+.studies__main::before{
+content: '';
+position: absolute;
+z-index: -1;
+top: 50%;
+transform: translateY(-50%);
+left: -55px;
+width: 200px;
+height: 392px;
+background-image: url('../img/bg-arrows.png');
+}
+
+.studies__main img{
+    min-width: 696px;
+    height: 360px;
+    object-fit: cover;
+}
+
+.studies__main-text{
+    padding: 31px 24px 48px 24px;
+    background-color: #fff;
+}
+
+.studies__main-text p{
+    font-size: 29px;
+    line-height: 42px;
+    color: var(--main-text);  
+    margin-top: 4px;
+}
+
+
+.studies__text{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.studies__article{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+
+/* SUBSCRIPTION */
+.subscribtion{
+    margin-top: var(--section-margin);
+}
+.subscription__content{
+    display: flex;
+    gap: 55px;
+}
+.subscription__item{
+    width: 33.3%;
+}
+
+.subscription__item article{
+    margin-top: 32px;
+}
+
+.subscribtion__form{
+    background-color: var(--purple-bg);
+    min-height: 483px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 48px;
+    text-align: center;
+}
+.subscribtion__form h3{
+    letter-spacing: var(--letter-spacing);
+    line-height: 18px;
+    font-weight: 700;
+    color: var(--accent-text);
+    text-transform: uppercase;  
+    margin-top: 40px;
+}
+
+.subscribtion__form p{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 36px;
+    color: #fff;
+}
+.subscribtion__form input{
+    margin-top: 40px;
+}
+
+
+/* FOOTER AND COPYRIGHT */
+
+.footer{
+    margin-top: 250px;
+    background-color: var(--purple-bg);
+    padding: 128px 110px;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__social-list{
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+}
+.footer__social-list li a{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__list-wrapper{
+    width: 191px;
+}
+
+.footer__list-wrapper h4{
+    color: var(--light);
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+    line-height: 28px;
+}
+
+.footer__list-wrapper ul{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__list-wrapper ul li{
+    color: var(--light);
+    line-height: 28px;
+}
+.footer__form{
+    max-width: 383px;
+}
+
+.footer__form p.paragraph-text-big{
+    margin-top: 0;
+}
+.footer__form input{
+margin-top: 32px;
+}
+
+
+.copyright{
+    background-color: var(--light);
+    padding: 7px 0;
+}
+
+.copyright__content{
+    display: flex;
+    gap: 16px;
+}
+.hidden{
+    display: none;
+}
+.burger__menu{
+    display: none;
+}
+
+@media screen and (max-width: 1400px){
+    .mobile-technology::before{
+        display: none;
+    }
+}
+@media screen and (max-width: 960px){
+    .studies__content{
+        flex-direction: column;
+    
+    }
+
+    .studies__main{
+        min-height: 280px;
+        width: 100%;
+    }
+
+    .studies__main img{
+        width: 100%;
+        min-width: 300px;
+    }
+
+    .ebook__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ebook__form{
+        width: 100%;
+    }
+
+    .subscription__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscription__item{
+        width: 100%;    
+    }
+
+    .subscribtion__form h3{
+        margin-top: 20px;
+    }
+
+    .footer{
+        padding: 40px;
+    }
+
+    .footer__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__form{
+        min-width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .paragraph-text-big{
+        max-width: 100%;
+    }
+
+    .footer__social{
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__social-list{
+        margin: 0;
+    }
+
+    .footer__list-wrapper{
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .mobile-technology{
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-technology__article::before{
+        display: none;
+    }
+}
+
+/* mobile menu burger */
+@media screen and (max-width: 850px){
+.header__nav{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header{
+    position: relative;
+    min-height: 150px;
+}
+.header__form-wrapper{
+    flex-direction: column;
+    gap: 0px;
+}
+
+}
+
+
+
+@media screen and (max-width: 740px){
+    .recent__content{
+        flex-direction: column;
+    }
+
+    .recent__article{
+        max-width: 100%;
+    }
+
+    .recent__article img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 250px;
+    }
+    .mobile-technology__text{
+        font-size: 36px;
+    }
+
+    :root{
+        --section-margin: 50px;
+    }
+
+    .footer{
+        margin-top: 100px;
+    }
+
+    .mobile-technology::after{
+        bottom: -40px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .footer__social{
+        flex-direction: column;
+    }
+    .mobile-technology::after{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .copyright__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .learn-more{
+        flex-direction: column;
+    }
+
+    .studies__main::before{
+        display: none;
+    }
+
+    .studies__main img{
+        min-width: 0px;
+    }
+
+    .mobile-technology{
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    .mobile-technology__article{
+        padding: 45px 30px;
+        border-right: 1px solid #EBEAF2;
+        border-radius: 8px;
+    }
+
+    .mobile-technology__text{
+        font-size: 24px;
+        line-height: 42px;
+    }
+
+    .mobile-technology__name{
+        margin-top: 5px;
+        display: block;
+    }
+}

@@ -1,0 +1,116 @@
+:root{
+    --purple-bg: #111131;
+    --light: #ABABFA;
+    --accent-text: #5C5CFF;
+    --main-text: #413E52;
+    --gray-text: #868297;
+    --section-margin: 130px;
+    --letter-spacing: 1.4px;
+}
+body{
+    font-size: 14px;
+    line-height: 29px;
+    font-family: Inter;
+    overflow-x: hidden;
+}
+.container{
+    box-sizing: border-box;
+    max-width: 1220px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section-h2{
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+    color: var(--main-text);
+    position: relative;
+}
+
+.section-h2::after{
+    content: '';
+    width: 148px;
+    height: 4px;
+    background-color: var(--main-text);
+    position: absolute;
+    bottom: -8.5px;
+    left: 0;
+}
+
+
+.section-header{
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    border-bottom: 2px solid var(--gray-text);
+    align-items: center;
+}
+.purple-title{
+    color: var(--accent-text);
+    letter-spacing: var(--letter-spacing);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.view-all-btn{
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--main-text);
+}
+
+.grey-text-small{
+    display: block;
+    line-height: 20px;
+    color: var(--gray-text);
+    font-size: 13px;
+}
+
+.paragraph-text{
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--main-text);
+}
+
+.email-input{
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 1px solid #8989F8;
+    width: 100%;
+    background-color: #1B1B4D;
+    outline: none;
+    padding: 13px 0;
+}
+
+.email-input::placeholder{
+    color: var(--accent-text);
+}
+
+.subscribe-button{
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 1px solid #8989F8;
+    width: 100%;
+    background-color: var(--accent-text);
+    outline: none;
+    padding: 13px 0;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+
+
+.paragraph-text-big{
+    font-size: 31px;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 50px;
+    max-width: 500px;
+    margin-top: 27px;
+}
